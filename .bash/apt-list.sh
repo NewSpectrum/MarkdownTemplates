@@ -15,3 +15,5 @@ function SpacePackages {
 }
 
 SpacePackages
+
+apt list --installed > ./.bash/out/packages.text
