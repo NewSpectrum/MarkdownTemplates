@@ -1,0 +1,19 @@
+# Temp Directories
+*/*.temp/*
+*/*temp/*
+*/.temp/*
+*/temp/*
+*/*.tmp/*
+*/*tmp/*
+*/.tmp/*
+*/tmp/*
+
+# Temp Files
+*.temp.*
+*temp.*
+*.tmp.*
+*tmp.*
+
+# Misc
+./.misc/*
+
