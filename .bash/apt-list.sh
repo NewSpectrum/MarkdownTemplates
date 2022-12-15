@@ -1,14 +1,17 @@
 #!/usr/bin/bash/env bash
 
-declare -g -a Packages=(
-	$(apt list --installed)
-)
-
-for pkg in "${Packages[@]}"
-do
-    if [[ "$pkg" == *"py"* ]]; then {
-		echo 
-	}
-	fi
+function SpacePackages {
+	declare -g -a PyPkgs=(
+		$(apt list --installed)
+	)
 	
-done
+	for pkg in "${PyPkgs[@]}"
+	do
+		if [[ "$pkg" != *"py"* ]]; then {
+			del="${pkg}"
+		}; fi
+		PyPkgs=("${PyPkgs[@]}/$del")
+	done
+}
+
+SpacePackages
