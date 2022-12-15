@@ -1,5 +1,14 @@
 #!/usr/bin/bash/env bash
 
-declare -a Packages
+declare -g -a Packages=(
+	$(apt list --installed)
+)
 
-apt list --installed > $Pa
+for pkg in "${Packages[@]}"
+do
+    if [[ "$pkg" == *"py"* ]]; then {
+		echo 
+	}
+	fi
+	
+done
